@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amazon Clone Header - NVHhyber.com</title>
+  <style>
+function changeLanguage(sel) {
+  var lang = sel.value;
+  // Add your own logic for switching the page language
+  alert("Language switched to: " + lang);
+  // E.g. you could reload the page, or show a translated version
+}
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5faff; }
+    header {
+      background: linear-gradient(90deg, #87ceeb 60%, #f5faff 100%);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .site-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #004466;
+      background: linear-gradient(90deg, #4fc3f7, #81d4fa, #fffde4, #4fc3f7);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slidebg 3s linear infinite;
+    }
+    @keyframes slidebg {
+      to { background-position: 200% center; }
+    }
+    .language-switch {
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #b3e0ff;
+      margin-left: 1rem;
+      background: #fff;
+    }
+    .menu {
+      display: flex;
+      gap: 1.2rem;
+    }
+    .menu a, .menu select {
+      background: #f5faff;
+      color: #004466;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid #b3e0ff;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .menu a:hover {
+      background: #e6f6ff;
+    }
+    .search-wrapper {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 6px;
+      border: 1px solid #b3e0ff;
+      padding: 2px 8px 2px 12px;
+      margin-left: 1.5rem;
+    }
+    .search-wrapper input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1rem;
+      padding: 0.4rem;
+    }
+    .search-wrapper button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0 6px;
+      color: #0077cc;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+    .search-icon {
+      width: 1.2em;
+      height: 1.2em;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    function changeLanguage(sel) {
+      var lang = sel.value;
+      // Add your own logic for switching the page language
+      alert("Language switched to: " + lang);
+      // E.g. you could reload the page, or show a translated version
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <span class="site-title">NVHhyber.com</span>
+      <select class="language-switch" onchange="changeLanguage(this)">
+        <option value="en">English</option>
+        <option value="ur">Urdu</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+      </select>
+      <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#">More</a>
+        <a href="#">Select</a>
+        <a href="#">Type</a>
+        <select>
+          <option>Select menu</option>
+          <option>Profile</option>
+          <option>Orders</option>
+          <option>Help</option>
+        </select>
+      </nav>
+    </div>
+    <form class="search-wrapper" onsubmit="alert('Searching: ' + this.query.value); return false;">
+      <input type="text" name="query" placeholder="Search..." />
+      <button type="submit" title="Search">
+        <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" stroke="currentColor"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor"/>
+        </svg>
+      </button>
+    </form>
+  </header>
+</body>
+</html>
 
